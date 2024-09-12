@@ -55,7 +55,7 @@ public class Window : System.Windows.Forms.Form
         _game.Setup();
         _lastTime = DateTime.Now;
         _timer.Tick += TickCb;
-        _timer.Interval = 100;
+        _timer.Interval = 50;
         _timer.Start();
     }
 
