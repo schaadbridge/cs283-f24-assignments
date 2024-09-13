@@ -4,8 +4,9 @@ using System.Windows.Forms;
 
 public class Game
 {
+    Image background = Image.FromFile("images/sprinkles_background.jpg");
     private Player _player = new Player(); 
-    private Ball[] _balls = new Ball[3];
+    private Ball[] _balls = new Ball[10];
     public int _points = 0;
     public int _startTime = DateTime.Now.TimeOfDay.Seconds;
     public float _nameBoxWidth = 0.3f * Window.width;
@@ -35,17 +36,18 @@ public class Game
             {
                 // ball is caught!
                 if (_balls[i]._yPosition >= 0.75f * Window.height && 
-                    (_player._xPosition > _balls[i]._xPosition - (float)0.025 * 
-                    Window.width && _player._xPosition < _balls[i]._xPosition + 
-                    (float)0.075 * Window.width))
+                    (_player._xPosition > _balls[i]._xPosition - 
+                    (0.4f * _player._width) && 
+                    _player._xPosition < _balls[i]._xPosition + 
+                    (0.4f * _player._width)))
                 {
                     _points += 1;
-                    _balls[i].BallCaught();
+                    _balls[i].HideBall();
                 }
                 // ball hits ground!
                 else if (_balls[i]._yPosition >= 0.80f * Window.height)
                 {
-                    _balls[i].BallSplat();
+                    _balls[i].HideBall();
                 }
                 else 
                 {
@@ -57,6 +59,7 @@ public class Game
 
     public void Draw(Graphics g)
     {
+        g.DrawImage(background, 0, 0, Window.width, Window.height);
         Color ground = ColorTranslator.FromHtml("#142F98");
         Brush groundBrush = new SolidBrush(ground);
         SolidBrush groundFontBrush = new SolidBrush(Color.Pink);
@@ -67,7 +70,7 @@ public class Game
         StringFormat nameFormat = new StringFormat();
         nameFormat.LineAlignment = StringAlignment.Near;
         nameFormat.Alignment = StringAlignment.Near;
-        g.FillRectangle(new SolidBrush(Color.Black), 0, 0.9f * Window.height,
+        g.FillRectangle(new SolidBrush(Color.Purple), 0, 0.9f * Window.height,
             _nameBoxWidth, Window.height);
         g.DrawString("Bridge Schaad '25\r\nCandy Catcher", nameFont, 
             groundFontBrush, 0, 0.9f * Window.height, nameFormat);
