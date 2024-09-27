@@ -19,3 +19,8 @@ Blue pine forest!
 ![image](https://github.com/user-attachments/assets/31682ad8-4d5e-4857-beb6-3d10745e8ba8)
 
 All nature models are from [Crazy Potato's Low-Poly Nature Pack!](https://crazy-potato-game-studio.itch.io/low-poly-nature-pack).
+
+# Assignment 4: Flythrough Tour
+The gif also shows my Gecko character, which I got from [OmabuArts Studio](https://www.omabuarts.com/product/quirky-series-free-animals/).
+
+![assignment4](https://github.com/user-attachments/assets/c3b61e02-5947-405e-aa79-ec6b5930c8f6)
