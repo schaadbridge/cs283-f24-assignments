@@ -24,3 +24,11 @@ All nature models are from [Crazy Potato's Low-Poly Nature Pack!](https://crazy-
 The gif also shows my Gecko character, which I got from [OmabuArts Studio](https://www.omabuarts.com/product/quirky-series-free-animals/).
 
 ![assignment4](https://github.com/user-attachments/assets/c3b61e02-5947-405e-aa79-ec6b5930c8f6)
+
+# Assignment 5: Spring Into Action
+Both gifs also showcase the `playercontrols.cs` script.
+## Rigid follow camera
+![assignment5_rigid](https://github.com/user-attachments/assets/bb6676bc-a98b-42e7-9386-e3c546d582da)
+
+## Spring follow camera
+![assignment5_spring](https://github.com/user-attachments/assets/dc382519-afb8-4570-8410-ce21a373a3f7)
