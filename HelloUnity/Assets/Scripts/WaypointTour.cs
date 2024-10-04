@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -14,6 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
   private Transform end;
   // Interpolant between start and end
   private float u = 1.0f;
+  float timer = 0.0f;
 
   // Start is called before the first frame update
   void Start()
@@ -37,18 +40,14 @@ public class NewBehaviourScript : MonoBehaviour
       currWaypointIdx = (currWaypointIdx + 1) % transformList.Count;
       start = camera.transform;
       end = transformList[currWaypointIdx];
-      u = 0.0f;
+      timer= 0.0f;
     }
     // If camera not at end position:
-    if (u < 1) {
-      u += (Time.deltaTime / duration);
+    if (timer <= duration) {
+      u = timer / duration;
       camera.transform.rotation = Quaternion.Slerp(start.rotation, end.rotation, u);
       camera.transform.position = Vector3.Lerp(start.position, end.position, u);
-    }
-    if (u > 1) {
-      camera.transform.rotation = end.rotation;
-      camera.transform.position = end.position;
-      u = 1;
+      timer += Time.deltaTime;
     }
   }
 }
