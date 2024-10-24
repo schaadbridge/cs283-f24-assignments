@@ -32,3 +32,14 @@ Both gifs also showcase the `playercontrols.cs` script.
 
 ## Spring follow camera
 ![assignment5_spring](https://github.com/user-attachments/assets/dc382519-afb8-4570-8410-ce21a373a3f7)
+
+# Assignment 6: Bezier, Faster, Stronger
+
+## Follow path linear
+![assignment6_followlinear](https://github.com/user-attachments/assets/d0bb2ad9-0ad1-4f33-b472-2185fc478505)
+
+## Follow path cubic
+![assignment6_followcubic](https://github.com/user-attachments/assets/f8d74130-77ea-4153-af4a-713527f9964a)
+
+## Animation
+I used the [LowPoly ToonCat Lite](https://assetstore.unity.com/packages/3d/characters/animals/lowpoly-toon-cat-lite-66083) from class for this so I could play around with a skeleton with more levels of hierarchy!
