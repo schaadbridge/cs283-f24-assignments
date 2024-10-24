@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class WaypointTour : MonoBehaviour
 {
-  public Camera camera;
+  public new Camera camera;
   public GameObject cameraPositions;
   public float duration = 3.0f;
   // List of all the camera transforms

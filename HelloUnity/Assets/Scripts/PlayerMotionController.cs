@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,16 @@ using UnityEngine;
 public class PlayerMotionController : MonoBehaviour
 {
     public Animator m_Animator;
-    public float movementSpeed;
-    public float visionSpeed = 3.0f;
+    public CharacterController m_controller;
+    public float movementSpeed = 0.0f;
+    public float visionSpeed = 10.0f;
+    public bool collision = true;
     // Start is called before the first frame update
     void Start()
     {
         //Get the animator, which you attach to the GameObject you are intending to animate.
         m_Animator = gameObject.GetComponent<Animator>();
+        m_controller = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -19,8 +23,12 @@ public class PlayerMotionController : MonoBehaviour
     {
         // W or up -- move forward
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-            movementSpeed = 0.1f;
-            transform.position += Time.deltaTime * movementSpeed * transform.forward;
+            movementSpeed = 2.0f;
+            if (collision) {
+                m_controller.Move(transform.forward * Time.deltaTime);
+            } else {
+                transform.position += Time.deltaTime * movementSpeed * transform.forward;
+            }
         }
         // A or left -- turn left
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
@@ -30,8 +38,12 @@ public class PlayerMotionController : MonoBehaviour
         }
         // S or down -- move back
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-            movementSpeed = 0.1f;
-            transform.position -= Time.deltaTime * movementSpeed * transform.forward;
+            movementSpeed = 2.0f;
+            if (collision) {
+                m_controller.Move(-transform.forward * Time.deltaTime);
+            } else {
+                transform.position -= Time.deltaTime * movementSpeed * transform.forward;
+            }
         }
         // D or right -- turn right
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {

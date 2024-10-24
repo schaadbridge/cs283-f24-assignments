@@ -8,17 +8,19 @@ public class SpringFollowCamera : MonoBehaviour
   // vDist = vertical follow distance
   public float hDist = 0.3f;
   public float vDist = 1.88f;
-  public float dampConstant = 2.0f;
+  public float dampConstant;
   public float springConstant = 0.5f;
     // Start is called before the first frame update
   public Transform target;
 
   Vector3 actualPosition;
 
-  public Vector3 velocity = new Vector3(0.8f, 0.8f, 0.8f);
+  public Vector3 velocity;
   void Start()
   {
-      actualPosition = transform.position;
+      actualPosition = target.position;
+      dampConstant = 2.0f * Mathf.Sqrt(springConstant);
+      velocity = new Vector3(0, 0, 0);
   }
 
   // Update is called once per frame
