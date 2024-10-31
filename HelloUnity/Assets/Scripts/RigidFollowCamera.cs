@@ -9,7 +9,7 @@ public class RigidFollowCamera : MonoBehaviour
   // vDist = vertical follow distance
   public float hDist = 1.0f;
   public float vDist = 0.25f;
-  public Vector3 camOffset = new Vector3(0, 0, 0);
+  public Vector3 camOffset;
   public Transform target;
   // Start is called before the first frame update
   void Start()

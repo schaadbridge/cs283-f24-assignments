@@ -10,12 +10,18 @@ public class PlayerMotionController : MonoBehaviour
     public float movementSpeed = 0.0f;
     public float visionSpeed = 10.0f;
     public bool collision = true;
+    private int _score = 0;
+    private UIManager _UIManager;
     // Start is called before the first frame update
     void Start()
     {
         //Get the animator, which you attach to the GameObject you are intending to animate.
         m_Animator = gameObject.GetComponent<Animator>();
         m_controller = gameObject.GetComponent<CharacterController>();
+        _UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        if (_UIManager == null) {
+            Debug.Log("UIManager is null!");
+        }
     }
 
     // Update is called once per frame
@@ -58,5 +64,10 @@ public class PlayerMotionController : MonoBehaviour
         //Sends the value from the horizontal axis input to the animator. Change the settings in the
         //Animator to define when the character is walking or running
         m_Animator.SetFloat("movementSpeed", movementSpeed);
+    }
+    public void addPoint() {
+        _score += 1;
+        Debug.Log("Adding a point. Total points: " + _score);
+        _UIManager.UpdateScore(_score);
     }
 }
