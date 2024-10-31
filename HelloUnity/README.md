@@ -43,3 +43,13 @@ Both gifs also showcase the `playercontrols.cs` script.
 
 ## Animation
 I used the [LowPoly ToonCat Lite](https://assetstore.unity.com/packages/3d/characters/animals/lowpoly-toon-cat-lite-66083) from class for this so I could play around with a skeleton with more levels of hierarchy!
+
+# Assignment 7: Motion and Collision
+
+## Motion Controller
+![assignment7_controller](https://github.com/user-attachments/assets/8a11f9a4-38c4-43d5-80fd-8d2e286522f9)
+
+## Collision
+![assignment7_collision](https://github.com/user-attachments/assets/197e5a22-a1f7-476d-96a8-fa25c00d144c)
+
+
