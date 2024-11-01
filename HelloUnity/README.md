@@ -52,4 +52,11 @@ I used the [LowPoly ToonCat Lite](https://assetstore.unity.com/packages/3d/chara
 ## Collision
 ![assignment7_collision](https://github.com/user-attachments/assets/197e5a22-a1f7-476d-96a8-fa25c00d144c)
 
+# Assignment 8: Collection Game
+## Collection Game + Object Spawner
+
+https://github.com/user-attachments/assets/334d119e-b4cb-468a-a264-d135978f7806
+
+Mushroom emoji in counter from [Vecteezy](https://www.vecteezy.com/png/46164045-brown-mushroom-emoji-clipart).
+I referred to [this Medium tutorial](https://medium.com/codex/script-communication-in-unity-using-getcomponent-ca4444bfec6) to help me with communication between scripts!
 
