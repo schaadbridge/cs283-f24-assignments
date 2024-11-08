@@ -60,3 +60,7 @@ https://github.com/user-attachments/assets/334d119e-b4cb-468a-a264-d135978f7806
 Mushroom emoji in counter from [Vecteezy](https://www.vecteezy.com/png/46164045-brown-mushroom-emoji-clipart).
 I referred to [this Medium tutorial](https://medium.com/codex/script-communication-in-unity-using-getcomponent-ca4444bfec6) to help me with communication between scripts!
 
+# Assignment 9: Wander
+
+![assignment8_wander](https://github.com/user-attachments/assets/ad2a44ae-651d-42ea-bfe2-306a4c4f370a)
+
