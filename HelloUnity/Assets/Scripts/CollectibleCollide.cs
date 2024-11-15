@@ -13,13 +13,13 @@ public class CollectibleCollide : MonoBehaviour
         Time.timeScale = 1.0f;
         _script = GameObject.Find("Gecko_A07").GetComponent<PlayerMotionController>();
         if (_script == null) {
-            Debug.Log("gecko cript is null!");
+            Debug.Log("gecko script is null!");
         }
     }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other) {
-        _script.addPoint();
+        _script.addPoint(1);
         StartCoroutine(AnimateCollision());
     }
 
@@ -30,7 +30,7 @@ public class CollectibleCollide : MonoBehaviour
             float u = timer / duration;
             transform.position = Vector3.Lerp(start, destination, u);
             transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, u);
-            Debug.Log(transform.localScale + " u: " + u + " timer: " + timer);
+            // Debug.Log(transform.localScale + " u: " + u + " timer: " + timer);
             yield return null;
         }
         gameObject.SetActive(false);

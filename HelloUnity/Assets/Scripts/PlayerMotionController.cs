@@ -10,7 +10,7 @@ public class PlayerMotionController : MonoBehaviour
     public float movementSpeed = 0.0f;
     public float visionSpeed = 10.0f;
     public bool collision = true;
-    private int _score = 0;
+    public int _score = 0;
     private UIManager _UIManager;
     // Start is called before the first frame update
     void Start()
@@ -65,8 +65,8 @@ public class PlayerMotionController : MonoBehaviour
         //Animator to define when the character is walking or running
         m_Animator.SetFloat("movementSpeed", movementSpeed);
     }
-    public void addPoint() {
-        _score += 1;
+    public void addPoint(int increment) {
+        _score += increment;
         Debug.Log("Adding a point. Total points: " + _score);
         _UIManager.UpdateScore(_score);
     }

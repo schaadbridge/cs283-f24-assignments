@@ -30,7 +30,7 @@ public class Wander : MonoBehaviour
         if (m_Agent.remainingDistance < 0.2f) {
             // select new target
             if (RandomPoint(transform.position, radius, out destination)) {
-                m_Agent.destination = destination;            
+                m_Agent.SetDestination(destination);            
             }    
         }
 
