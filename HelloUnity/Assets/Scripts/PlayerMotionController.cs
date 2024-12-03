@@ -11,6 +11,7 @@ public class PlayerMotionController : MonoBehaviour
     public float visionSpeed = 10.0f;
     public bool collision = true;
     public int _score = 0;
+    public Boolean _exploreMode = false;
     private UIManager _UIManager;
     // Start is called before the first frame update
     void Start()

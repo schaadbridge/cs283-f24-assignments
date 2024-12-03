@@ -14,12 +14,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < maxSpawn; i++) {
-            Vector3 target;
-            RandomPointOnTerrain(transform.position, radius, out target);
-            if (target != Vector3.zero)
-            {
-                Instantiate(templateObject, target, Quaternion.identity);
-            }
+            PlaceObjectRandom();
         }
     }
 
@@ -32,11 +27,20 @@ public class Spawner : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
+    public void PlaceObjectRandom()
+    {
+        Vector3 target;
+        RandomPointOnTerrain(transform.position, radius, out target);
+        if (target != Vector3.zero)
+        {
+            Instantiate(templateObject, target, Quaternion.identity, transform);
+        }
+    }
+
     private void RandomPointOnTerrain(Vector3 position, float x, out Vector3 target)
     {
         Vector2 delta = Random.insideUnitCircle * x;
         Vector3 newLocation = new Vector3(position.x + delta.x, position.y, position.z + delta.y);
-        Debug.Log("New location: " + newLocation);
         NavMeshHit hit;
         // Once a new target is selected on the navmesh, return that position
         if (NavMesh.SamplePosition(newLocation, out hit, 1.0f, NavMesh.AllAreas))

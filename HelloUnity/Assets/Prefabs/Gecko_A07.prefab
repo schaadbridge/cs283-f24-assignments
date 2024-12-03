@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.071
+      value: -60.091
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.192
+      value: 0.043
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
       propertyPath: m_Name
-      value: Gecko_LOD0
+      value: Gecko_A07
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
       propertyPath: m_Controller
@@ -106,6 +106,7 @@ MonoBehaviour:
   movementSpeed: 0
   visionSpeed: 20
   collision: 1
+  _score: 0
 --- !u!143 &3230456359371254733
 CharacterController:
   m_ObjectHideFlags: 0
