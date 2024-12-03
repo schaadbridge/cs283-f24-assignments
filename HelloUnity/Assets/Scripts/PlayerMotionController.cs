@@ -27,11 +27,17 @@ public class PlayerMotionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // apply gravity
+        Vector3 moveVector = movementSpeed * transform.forward;
+        if (!m_controller.isGrounded)
+        {
+            moveVector += Physics.gravity;
+        }
         // W or up -- move forward
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-            movementSpeed = 2.0f;
+            movementSpeed = 1.0f;
             if (collision) {
-                m_controller.Move(transform.forward * Time.deltaTime);
+                m_controller.Move(moveVector * Time.deltaTime);
             } else {
                 transform.position += Time.deltaTime * movementSpeed * transform.forward;
             }
@@ -44,9 +50,9 @@ public class PlayerMotionController : MonoBehaviour
         }
         // S or down -- move back
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-            movementSpeed = 2.0f;
+            movementSpeed = 1.0f;
             if (collision) {
-                m_controller.Move(-transform.forward * Time.deltaTime);
+                m_controller.Move(movementSpeed * (-transform.forward + Physics.gravity) * Time.deltaTime);
             } else {
                 transform.position -= Time.deltaTime * movementSpeed * transform.forward;
             }

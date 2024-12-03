@@ -47,9 +47,6 @@ public class BehaviorMinion : MonoBehaviour
 
         checkToFollow.OpenBranch(notAtHome);
         checkToFollow.OpenBranch(follow);
-
-
-
     }
 
     // Update is called once per frame

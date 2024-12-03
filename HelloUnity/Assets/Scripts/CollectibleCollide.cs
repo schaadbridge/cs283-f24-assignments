@@ -19,18 +19,22 @@ public class CollectibleCollide : MonoBehaviour
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other) {
-        _script.addPoint(1);
-        StartCoroutine(AnimateCollision());
+        // confirm collision by player character 
+        if (System.String.Equals(other.gameObject.name, "Gecko_A07"))
+        {
+            _script.addPoint(1);
+            StartCoroutine(AnimateCollision());
+        }
     }
 
     IEnumerator AnimateCollision() {
+        Debug.Log("Reached animation.");
         Vector3 destination = transform.position + new Vector3(0, 0.5f, 0);
         Vector3 start = transform.position;
         for (float timer = 0; timer < duration; timer += Time.deltaTime) {
             float u = timer / duration;
             transform.position = Vector3.Lerp(start, destination, u);
             transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, u);
-            // Debug.Log(transform.localScale + " u: " + u + " timer: " + timer);
             yield return null;
         }
         gameObject.SetActive(false);

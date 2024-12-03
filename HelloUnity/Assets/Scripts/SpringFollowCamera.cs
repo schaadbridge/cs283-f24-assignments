@@ -18,7 +18,7 @@ public class SpringFollowCamera : MonoBehaviour
   public Vector3 velocity;
   void Start()
   {
-      actualPosition = target.position;
+      actualPosition = target.position + new Vector3(-hDist, vDist, 0);
       dampConstant = 2.0f * Mathf.Sqrt(springConstant);
       velocity = new Vector3(0, 0, 0);
   }
