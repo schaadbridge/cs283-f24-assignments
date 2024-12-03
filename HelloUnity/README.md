@@ -64,3 +64,15 @@ I referred to [this Medium tutorial](https://medium.com/codex/script-communicati
 
 ![assignment8_wander](https://github.com/user-attachments/assets/ad2a44ae-651d-42ea-bfe2-306a4c4f370a)
 
+# Assignment 10: Behave!
+
+Expected minion (NPC gecko) behavior: 
+If in range, attack (decrease score every half second). Else if not in home area (fence around house), follow. Else retreat.
+
+Expected unique (NPC sparrow) behavior:
+If in range, flap wings. If in range and score less than 5, give gift (increase score every half second). Else stand idle.
+
+https://github.com/user-attachments/assets/a06e11d6-6fcf-4cb1-a541-172a553d716e
+
+
+
