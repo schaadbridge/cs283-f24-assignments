@@ -7,19 +7,33 @@ public class PlayerMotionController : MonoBehaviour
 {
     public Animator m_Animator;
     public CharacterController m_controller;
-    public float movementSpeed = 0.0f;
+
+    [SerializeField]
+    private SkinnedMeshRenderer m_playerMesh;
+    public float movementSpeed;
+    [SerializeField]
+    private float goSpeed = 3.0f;
+    private static float stopSpeed = -0.1f;
     public float visionSpeed = 10.0f;
     public bool collision = true;
     public int _score = 0;
     public Boolean _exploreMode = false;
     private UIManager _UIManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        //Get the animator, which you attach to the GameObject you are intending to animate.
+        // Set customized player color
+        if (MainManager.Instance != null)
+        {
+            m_playerMesh.GetComponent<SkinnedMeshRenderer>().material.color = MainManager.Instance.TeamColor;
+        }
+        movementSpeed = stopSpeed;
+
+        // Get the animator, which you attach to the GameObject you are intending to animate.
         m_Animator = gameObject.GetComponent<Animator>();
         m_controller = gameObject.GetComponent<CharacterController>();
-        _UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _UIManager = GameObject.Find("HeadsUpDisplays").GetComponent<UIManager>();
         if (_UIManager == null) {
             Debug.Log("UIManager is null!");
         }
@@ -34,9 +48,10 @@ public class PlayerMotionController : MonoBehaviour
         {
             moveVector += Physics.gravity;
         }
+        movementSpeed = stopSpeed;
         // W or up -- move forward
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-            movementSpeed = 1.0f;
+            movementSpeed = goSpeed;
             if (collision) {
                 m_controller.Move(moveVector * Time.deltaTime);
             } else {
@@ -44,14 +59,13 @@ public class PlayerMotionController : MonoBehaviour
             }
         }
         // A or left -- turn left
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
-            movementSpeed = -0.1f;
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             Vector3 newRotation = Time.deltaTime * visionSpeed * transform.up;
             transform.eulerAngles -= newRotation;
         }
         // S or down -- move back
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-            movementSpeed = 1.0f;
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+            movementSpeed = goSpeed;
             if (collision) {
                 m_controller.Move(movementSpeed * (-transform.forward + Physics.gravity) * Time.deltaTime);
             } else {
@@ -59,13 +73,9 @@ public class PlayerMotionController : MonoBehaviour
             }
         }
         // D or right -- turn right
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
-            movementSpeed = -0.1f;
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             Vector3 newRotation = Time.deltaTime * visionSpeed * transform.up;
             transform.eulerAngles += newRotation;
-        }
-        else {
-            movementSpeed = -0.1f;
         }
         
         //Sends the value from the horizontal axis input to the animator. Change the settings in the
@@ -76,5 +86,11 @@ public class PlayerMotionController : MonoBehaviour
         _score += increment;
         Debug.Log("Adding a point. Total points: " + _score);
         _UIManager.UpdateScore(_score);
+    }
+
+    public void OnCollisionEnter()
+    {
+        addPoint(-1);
+        // drop mushroom
     }
 }

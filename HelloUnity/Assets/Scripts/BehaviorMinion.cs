@@ -71,10 +71,9 @@ public class BehaviorMinion : MonoBehaviour
         if (Time.realtimeSinceStartup - lastOutOfRange > 0.5f)
         {
             lastOutOfRange = Time.realtimeSinceStartup;
-            _script.addPoint(-1);
+            _script.OnCollisionEnter();
             yield return BTState.Continue;
         }
-        Debug.Log(Time.realtimeSinceStartup - lastOutOfRange);
         yield return BTState.Success;
     }
 
