@@ -774,6 +774,38 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.8490566
       objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 365066160187530612}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483984412659747897, guid: bccf692c182be184394b50beabf5830d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5759812815632514678, guid: bccf692c182be184394b50beabf5830d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -943,6 +975,11 @@ PrefabInstance:
       addedObject: {fileID: 272633849}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bccf692c182be184394b50beabf5830d, type: 3}
+--- !u!1 &365066160187530612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1262198045421602186, guid: bccf692c182be184394b50beabf5830d, type: 3}
+  m_PrefabInstance: {fileID: 365066160187530611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

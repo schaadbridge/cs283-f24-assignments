@@ -357,7 +357,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506975286}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &506975288
 Camera:
   m_ObjectHideFlags: 0
@@ -585,6 +585,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1390335768968493920, guid: f15c496d720638c48adbf3bf6a07658b, type: 3}
+      propertyPath: goSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1390335768968493920, guid: f15c496d720638c48adbf3bf6a07658b, type: 3}
       propertyPath: _exploreMode
       value: 1
@@ -895,6 +899,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34f30712d30697648b80843f9e09934c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1923389962}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34f30712d30697648b80843f9e09934c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1923389963}
   m_SourcePrefab: {fileID: 100100000, guid: 34f30712d30697648b80843f9e09934c, type: 3}
 --- !u!1 &1923389959 stripped
 GameObject:
@@ -936,6 +943,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &1923389963
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923389959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.6
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1001 &2043679386
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     {
         _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         goal = _levelLoader.scoreGoal;
+        Debug.Log("UIManager start method.");
         label.text = "Mushrooms: " + 0 + "/" + goal;
     }
 

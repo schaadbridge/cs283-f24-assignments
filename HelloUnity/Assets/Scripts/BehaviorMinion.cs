@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using BTAI;
 using UnityEngine;
@@ -13,15 +12,17 @@ public class BehaviorMinion : MonoBehaviour
     public Vector3 minionHome;
     private PlayerMotionController _script;
     private float lastOutOfRange;
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        _script = target.GetComponent<PlayerMotionController>();
-        if (_script == null)
+        if (!target.TryGetComponent<PlayerMotionController>(out _script))
         {
             Debug.Log("target script is null!");
         }
+        _audioSource = GetComponent<AudioSource>();
+
         // minion will return to its starting point when retreating -- MUST START OUTSIDE TARGETHOME
         minionHome = transform.position;
 
@@ -57,11 +58,13 @@ public class BehaviorMinion : MonoBehaviour
 
     IEnumerator<BTState> CheckInRange()
     {
-        if ((transform.position - target.transform.position).magnitude > range)
+        if ((transform.position - target.transform.position).sqrMagnitude > range * range)
         {
             lastOutOfRange = Time.realtimeSinceStartup;
             yield return BTState.Failure;
         }
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.ResetPath();
         yield return BTState.Success;
     }
 
@@ -71,6 +74,7 @@ public class BehaviorMinion : MonoBehaviour
         if (Time.realtimeSinceStartup - lastOutOfRange > 0.5f)
         {
             lastOutOfRange = Time.realtimeSinceStartup;
+            _audioSource.Play();
             _script.OnCollisionEnter();
             yield return BTState.Continue;
         }
@@ -96,6 +100,7 @@ public class BehaviorMinion : MonoBehaviour
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
 
+        agent.SetDestination(target.transform.position);
         agent.SetDestination(target.transform.position);
         yield return BTState.Success;
     }

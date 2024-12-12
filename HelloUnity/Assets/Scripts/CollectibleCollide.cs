@@ -9,7 +9,8 @@ public class CollectibleCollide : MonoBehaviour
     public float duration = 20.0f;
     private PlayerMotionController _controlScript;
     private Spawner _spawnScript;
-    private Boolean _triggered = false;
+    private bool _triggered = false;
+    private AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class CollectibleCollide : MonoBehaviour
         {
             Debug.Log("spawner script is null!");
         }
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class CollectibleCollide : MonoBehaviour
         // confirm collision by player character 
         if (Equals(other.gameObject.name, "Gecko_A07"))
         {
+            _audioSource.Play();
             StartCoroutine(AnimateCollision());
             // Messy solution to avoid doubly counting
             // TODO: Refactor collectible coroutine

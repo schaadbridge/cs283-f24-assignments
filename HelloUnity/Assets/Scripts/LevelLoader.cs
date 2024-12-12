@@ -12,6 +12,7 @@ public class LevelLoader : MonoBehaviour
     private PlayerMotionController _motionController;
     private TimerScript _timer;
     private MainMenuScript _menuScript;
+    private AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,8 @@ public class LevelLoader : MonoBehaviour
         _motionController = GameObject.Find("Gecko_A07").GetComponent<PlayerMotionController>();
         _timer = GameObject.Find("LevelTimer").GetComponent<TimerScript>();
         _menuScript = GameObject.Find("HeadsUpDisplays").GetComponent<MainMenuScript>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.Play();
     }
 
     // Update is called once per frame
