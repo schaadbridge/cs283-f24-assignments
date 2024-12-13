@@ -1,6 +1,7 @@
 # Final Project
 ## Build and run
 ![image](https://github.com/user-attachments/assets/b82c8860-322d-4531-a510-e1adf0422c7b)
+
 Using the above indexing of scenes in build, start from the scene: Final_StartScreen.unity.
 
 ## How to play
