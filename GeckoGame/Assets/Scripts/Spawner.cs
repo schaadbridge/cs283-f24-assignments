@@ -7,9 +7,9 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
-    public float radius = 5.0f;
+    public float radius = 30.0f;
     public GameObject templateObject;
-    public int maxSpawn = 10;
+    public int maxSpawn = 30;
     // Start is called before the first frame update
     void Start()
     {

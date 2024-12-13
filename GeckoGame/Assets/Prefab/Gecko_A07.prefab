@@ -79,11 +79,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3230456359371254733}
   m_SourcePrefab: {fileID: 100100000, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
---- !u!95 &958812436838884060 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
-  m_PrefabInstance: {fileID: 6639703867628101453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5829239757759029788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a387e69fc974de148a9f773909c6c2a3, type: 3}
@@ -98,15 +93,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5829239757759029788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a265d62b49da744a2017d99df2fe1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 696199703274f60438639a3aebaf23c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Animator: {fileID: 958812436838884060}
+  m_Animator: {fileID: 0}
   m_controller: {fileID: 0}
+  m_playerMesh: {fileID: 0}
   movementSpeed: 0
-  visionSpeed: 20
+  goSpeed: 1
+  visionSpeed: 40
   collision: 1
   _score: 0
+  _exploreMode: 0
 --- !u!143 &3230456359371254733
 CharacterController:
   m_ObjectHideFlags: 0

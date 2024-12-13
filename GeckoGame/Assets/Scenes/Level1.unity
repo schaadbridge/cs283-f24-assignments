@@ -105,15 +105,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 3
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
+    agentRadius: 0.25
+    agentHeight: 0.3
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.2
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.083333336
     manualTileSize: 0
     tileSize: 256
     buildHeightMesh: 0
@@ -163,11 +163,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 35656873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2cbe6e62d73db94c9ddcb32a65211ad, type: 3}
+  m_Script: {fileID: 11500000, guid: d17c206b8febc4e4ba17afc941929115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 30
-  templateObject: {fileID: 2879184028306537909, guid: 851e630ba78bb4543852fde5698f3ae4, type: 3}
+  templateObject: {fileID: 0}
   maxSpawn: 30
 --- !u!4 &140109060 stripped
 Transform:
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 368590426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966f2b05f088d3048a3422864c33c060, type: 3}
+  m_Script: {fileID: 11500000, guid: d5617528659d3fc4b9282edb94ddf1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreGoal: 10
@@ -258,7 +258,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7b323a35ba3e4a4682726ba5d277370, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e65fc02d68b9eca4fa5c3847137b9eae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -447,15 +447,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 506975286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d307ca523815446bbc0a76a78acbfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bb0da0ff6da38d4ab742d78e88af146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hDist: 1.58
-  vDist: 0.78
-  dampConstant: 2
+  hDist: 1.5
+  vDist: 0.75
+  dampConstant: 0
   springConstant: 2
   target: {fileID: 140109060}
-  velocity: {x: 0.021704502, y: -0.0000002980234, z: -0.09783683}
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!45 &506975291
 Skybox:
   m_ObjectHideFlags: 0
@@ -518,9 +518,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8584530452982218574, guid: 1f9f7050ef8360341a4616b3b86d480d, type: 3}
+      propertyPath: m_VoxelSize
+      value: 0.083333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584530452982218574, guid: 1f9f7050ef8360341a4616b3b86d480d, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: 90eb0994381f7a4479d3dfe0de5e3ec2, type: 2}
+      objectReference: {fileID: 23800000, guid: 053bc684445270040a8e1984dda5746c, type: 2}
     - target: {fileID: 8997367807110624761, guid: 1f9f7050ef8360341a4616b3b86d480d, type: 3}
       propertyPath: m_Name
       value: LevelSceneColliders
@@ -916,6 +920,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7329830365319195071, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a71c0dc7bbe528241944b91ea4e57480, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1025,7 +1033,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9072020396590523387, guid: 425306085eedfa94a87060d9b3eea012, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 1669594250}
     - targetCorrespondingSourceObject: {fileID: 9072020396590523387, guid: 425306085eedfa94a87060d9b3eea012, type: 3}
       insertIndex: -1
@@ -1048,7 +1056,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669594249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df2485c418e79b4e8e30ad62b69ea93, type: 3}
+  m_Script: {fileID: 11500000, guid: 86b5143635f92994ba277c447e992144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   range: 0.3
@@ -1211,7 +1219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923389959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2c61596606edc47bb515ee29126885, type: 3}
+  m_Script: {fileID: 11500000, guid: c4657e82506839143bdc8975062565c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   range: 0.5

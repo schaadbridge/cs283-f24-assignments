@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SpringFollowCamera : MonoBehaviour
 {
-  // hDist = horizontal follow distance
-  // vDist = vertical follow distance
-  public float hDist = 0.3f;
-  public float vDist = 1.88f;
-  public float dampConstant;
-  public float springConstant = 0.5f;
+    [SerializeField]
+    private float hDist = 1.5f;
+    [SerializeField]
+    private float vDist = 0.75f;
+    [SerializeField]
+    private float dampConstant;
+    [SerializeField] 
+    private float springConstant = 2.0f;
     // Start is called before the first frame update
   public Transform target;
 

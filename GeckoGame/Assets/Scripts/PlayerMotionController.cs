@@ -12,9 +12,9 @@ public class PlayerMotionController : MonoBehaviour
     private SkinnedMeshRenderer m_playerMesh;
     public float movementSpeed;
     [SerializeField]
-    private float goSpeed = 3.0f;
+    private float goSpeed = 1.0f;
     private static float stopSpeed = -0.1f;
-    public float visionSpeed = 10.0f;
+    public float visionSpeed = 40.0f;
     public bool collision = true;
     public int _score = 0;
     public Boolean _exploreMode = false;

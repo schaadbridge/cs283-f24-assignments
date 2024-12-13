@@ -7,7 +7,7 @@ public class BehaviorMinion : MonoBehaviour
 {
     private Root m_btRoot = BT.Root();
     // Distance at which the minion will start following player
-    public float range = 0.5f;
+    public float range = 0.3f;
     public GameObject target;
     public Vector3 minionHome;
     private PlayerMotionController _script;

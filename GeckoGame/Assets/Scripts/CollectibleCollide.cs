@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CollectibleCollide : MonoBehaviour
 {
-    public float duration = 20.0f;
+    public float duration = 1.0f;
     private PlayerMotionController _controlScript;
     private Spawner _spawnScript;
     private bool _triggered = false;
