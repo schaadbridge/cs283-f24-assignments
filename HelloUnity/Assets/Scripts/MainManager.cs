@@ -16,4 +16,14 @@ public class MainManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Debug.Log("QUIT!!!");
+            Application.Quit();
+        }
+
+    }
 }
