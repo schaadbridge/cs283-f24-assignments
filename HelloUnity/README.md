@@ -11,6 +11,26 @@ Press 'esc' to quit. Use your mouse to navigate on screen menus and color select
 Multiple scenes, color customization scene, sound, data persistence between scenes (color), added collision detection throughout scene.
 
 ## Images and video:
+### Start Screen
+![image](https://github.com/user-attachments/assets/77ff7a23-4fd0-4c46-8841-4123c6eb8e31)
+
+### Color Customization
+https://github.com/user-attachments/assets/cc76f2ae-c182-4a15-a0ca-d65bf85bcf1f
+
+
+
+### Collection Game
+https://github.com/user-attachments/assets/ce082744-0053-4dc0-9084-e033cb69e2b3
+
+### Explore Mode
+
+
+https://github.com/user-attachments/assets/113b075e-0821-4a76-9ca7-4b7570cd2c46
+
+
+
+
+
 
 # Assignment 3: Create a Virtual World -- Pine Tree Forest
 
