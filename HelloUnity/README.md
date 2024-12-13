@@ -1,3 +1,16 @@
+# Final Project
+## Build and run
+![image](https://github.com/user-attachments/assets/b82c8860-322d-4531-a510-e1adf0422c7b)
+Using the above indexing of scenes in build, start from the scene: Final_StartScreen.unity.
+
+## How to play
+Press 'esc' to quit. Use your mouse to navigate on screen menus and color selection, use arrows to navigate the rounds. Try to beat all three to win the collection game! Or, play in explore mode and collect as many mushrooms as you wish.
+
+## Features implemented
+Multiple scenes, color customization scene, sound, data persistence between scenes (color), added collision detection throughout scene.
+
+## Images and video:
+
 # Assignment 3: Create a Virtual World -- Pine Tree Forest
 
 I wanted to play around with scale here, so I made the controller relatively small and low to the ground (bug-like!), and might play around more with making the rest of the environment bigger in comparison.
