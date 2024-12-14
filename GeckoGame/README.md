@@ -8,10 +8,10 @@ Using the above indexing of scenes in build, start from the scene: Final_StartSc
 You can play the scenes individually, but the color customization will not save between scenes and navigation between scenes will be different.
 
 ## How to play
-Use your mouse to navigate on screen menus and color selection, use arrows to navigate the rounds. Try to beat all three to win the collection game! Or, play in explore mode and collect as many mushrooms as you wish. Press 'esc' to quit. 
+Use your mouse to navigate on screen menus and color selection, use arrows to navigate the forest. Once you meet the on-screen goal, you make it to the next level. Try to beat all three to win the collection game! Or, play in explore mode and collect as many mushrooms as you wish. Press 'esc' to quit. 
 
 ## Features implemented
-Multiple scenes (MainMenuScript.cs), color customization scene (ColorPickerControl.cs and SVImageControl.cs), sound, data persistence between scenes (color) (MainManager.cs), pause button, improved collision detection throughout scene.
+Multiple scenes (MainMenuScript.cs), color customization scene (ColorPickerControl.cs and SVImageControl.cs), sound, data persistence between scenes (color) (MainManager.cs), pause button (HeadsUpDisplays.cs), improved collision detection throughout scene.
 
 ## Images and video:
 ### Start Screen
@@ -21,11 +21,12 @@ Multiple scenes (MainMenuScript.cs), color customization scene (ColorPickerContr
 https://github.com/user-attachments/assets/cc76f2ae-c182-4a15-a0ca-d65bf85bcf1f
 
 ### Collection Game
-https://github.com/user-attachments/assets/ce082744-0053-4dc0-9084-e033cb69e2b3
+
+https://github.com/user-attachments/assets/38be517e-87cb-4ac1-9fb5-e502f303571c
 
 ### Explore Mode
 
-https://github.com/user-attachments/assets/113b075e-0821-4a76-9ca7-4b7570cd2c46
+https://github.com/user-attachments/assets/73121e18-d5f5-4be1-96b9-526b49f859a1
 
 ## Credits
 Environment assets from [Crazy Potato's Low Poly Nature Pack](https://crazy-potato-game-studio.itch.io/low-poly-nature-pack).
