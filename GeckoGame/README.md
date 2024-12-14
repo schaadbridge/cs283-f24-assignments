@@ -18,7 +18,7 @@ Multiple scenes (MainMenuScript.cs), color customization scene (ColorPickerContr
 ![image](https://github.com/user-attachments/assets/77ff7a23-4fd0-4c46-8841-4123c6eb8e31)
 
 ### Color Customization
-https://github.com/user-attachments/assets/cc76f2ae-c182-4a15-a0ca-d65bf85bcf1f
+https://github.com/user-attachments/assets/e27747e1-4522-43a2-a18e-aefb0bd00c81
 
 ### Collection Game
 
