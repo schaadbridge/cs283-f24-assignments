@@ -3,7 +3,7 @@
 ![image](https://github.com/user-attachments/assets/7f6446f0-5fd8-472b-abc7-9382f40b7c91)
 
 
-Using the above indexing of scenes in build, start from the scene: Final_StartScreen.unity.
+Using the above indexing of scenes in build, start from the scene: StartScreen.unity.
 
 You can play the scenes individually, but the color customization will not save between scenes and navigation between scenes will be different.
 
