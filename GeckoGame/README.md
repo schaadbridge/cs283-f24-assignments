@@ -11,7 +11,13 @@ You can play the scenes individually, but the color customization will not save 
 Use your mouse to navigate on screen menus and color selection, use arrows to navigate the forest. Once you meet the on-screen goal, you make it to the next level. Try to beat all three to win the collection game! Or, play in explore mode and collect as many mushrooms as you wish. Press 'esc' to quit. 
 
 ## Features implemented
-Multiple scenes (MainMenuScript.cs), color customization scene (ColorPickerControl.cs and SVImageControl.cs), sound, data persistence between scenes (color) (MainManager.cs), pause button (HeadsUpDisplays.cs), improved collision detection throughout scene.
+MainMenuScript.cs and HeadsUpDisplays.cs: Navigation between multiple scenes; Pause/Resume button
+
+ColorPickerControl.cs and SVImageControl.cs: Generate saturation, value, and hue textures for the user to choose character color.
+
+MainManager.cs: Data persistance (color) between scenes
+
+Expanded game to multiscene experience with lower stimulation, exploration mode. Also added sound, improved the level scene with collision, walls. 
 
 ## Images and video:
 ### Start Screen
