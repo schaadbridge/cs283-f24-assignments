@@ -11,7 +11,7 @@ public class BehaviorMinion : MonoBehaviour
     public GameObject target;
     public Vector3 minionHome;
     private PlayerMotionController _script;
-    private float lastOutOfRange;
+    private float lastOutOfRange = 0;
     private AudioSource _audioSource;
 
     // Start is called before the first frame update
@@ -60,7 +60,7 @@ public class BehaviorMinion : MonoBehaviour
     {
         if ((transform.position - target.transform.position).sqrMagnitude > range * range)
         {
-            lastOutOfRange = Time.realtimeSinceStartup;
+            lastOutOfRange += Time.deltaTime;
             yield return BTState.Failure;
         }
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -71,13 +71,14 @@ public class BehaviorMinion : MonoBehaviour
     IEnumerator<BTState> Attack()
     {
         // take 1 mushroom each second
-        if (Time.realtimeSinceStartup - lastOutOfRange > 0.5f)
+        if (lastOutOfRange > 0.5f)
         {
-            lastOutOfRange = Time.realtimeSinceStartup;
+            lastOutOfRange = 0;
             _audioSource.Play();
             _script.OnCollisionEnter();
             yield return BTState.Continue;
         }
+        lastOutOfRange += Time.deltaTime;
         yield return BTState.Success;
     }
 

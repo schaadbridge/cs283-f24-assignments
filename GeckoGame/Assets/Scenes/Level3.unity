@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17c206b8febc4e4ba17afc941929115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 25
+  radius: 30
   templateObject: {fileID: 2879184028306537909, guid: 851e630ba78bb4543852fde5698f3ae4, type: 3}
   maxSpawn: 20
 --- !u!4 &140109060 stripped
