@@ -844,6 +844,18 @@ PrefabInstance:
       propertyPath: totalLevelTime
       value: 210
       objectReference: {fileID: 0}
+    - target: {fileID: 1783197361178121530, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783197361178121530, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532087436434764551, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2551240736412054120, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -924,11 +936,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3254978240228750687, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7329830365319195071, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a71c0dc7bbe528241944b91ea4e57480, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 7663819672451887862, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8844787907350173983, guid: 10a888c98ef81b246938a09885c010ad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

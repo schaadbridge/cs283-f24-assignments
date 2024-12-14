@@ -133,8 +133,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8844787907350173983}
-        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+      - m_Target: {fileID: 2175243724087519966}
+        m_TargetAssemblyTypeName: HeadsUpDisplays, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 730565967904199998}
   - component: {fileID: 2868871622831553465}
   - component: {fileID: 1175186644125286292}
-  - component: {fileID: 7264261944142134356}
+  - component: {fileID: 2175243724087519966}
   m_Layer: 5
   m_Name: HeadsUpDisplays
   m_TagString: Untagged
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 3319238694726644744}
---- !u!114 &7264261944142134356
+--- !u!114 &2175243724087519966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1416956605461500813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76fc3ff5289421344a6f76d1556792c5, type: 3}
+  m_Script: {fileID: 11500000, guid: cb94c247d78b1594e8e0be51da93b465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _gameOverScreen: {fileID: 6061265696775858901}
@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8844787907350173983}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
         m_MethodName: OnApplicationQuit
         m_Mode: 1
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8844787907350173983}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
         m_MethodName: EscapeToMain
         m_Mode: 1
@@ -1791,7 +1791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76fc3ff5289421344a6f76d1556792c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 6061265696775858901}
 --- !u!1 &6825949486930761148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,10 +2217,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8533252848969143037}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2175243724087519966}
+        m_TargetAssemblyTypeName: HeadsUpDisplays, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2230,10 +2229,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8844787907350173983}
-        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-        m_MethodName: PauseGame
-        m_Mode: 1
+      - m_Target: {fileID: 8533252848969143037}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2307,7 +2306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c9594d4ea324b3147b82497d8a952f66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a71c0dc7bbe528241944b91ea4e57480, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2460,7 +2459,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5560292687844415309}
-  - component: {fileID: 8844787907350173983}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -2490,19 +2488,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -3.8000183}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8844787907350173983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533252848969143037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76fc3ff5289421344a6f76d1556792c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 6061265696775858901}
 --- !u!1 &8789408671189141594
 GameObject:
   m_ObjectHideFlags: 0

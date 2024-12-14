@@ -11,7 +11,7 @@ public class LevelLoader : MonoBehaviour
 
     private PlayerMotionController _motionController;
     private TimerScript _timer;
-    private MainMenuScript _menuScript;
+    private HeadsUpDisplays _headsUpDisplayScript;
     private AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour
         levelToChange = SceneManager.GetActiveScene().buildIndex + 1;
         _motionController = GameObject.Find("Gecko_A07").GetComponent<PlayerMotionController>();
         _timer = GameObject.Find("LevelTimer").GetComponent<TimerScript>();
-        _menuScript = GameObject.Find("HeadsUpDisplays").GetComponent<MainMenuScript>();
+        _headsUpDisplayScript = GameObject.Find("HeadsUpDisplays").GetComponent<HeadsUpDisplays>();
         _audioSource = GetComponent<AudioSource>();
         _audioSource.Play();
     }
@@ -36,10 +36,7 @@ public class LevelLoader : MonoBehaviour
 
         if (_timer.totalLevelTime <= 0)
         {
-            _menuScript.GameOver();
+            _headsUpDisplayScript.GameOver();
         }
-        // if out of time: show out of time!!
-            // PAUSE
-            // GAMEOVERSCREEN
     }
 }

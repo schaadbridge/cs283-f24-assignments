@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _gameOverScreen;
-
     public void EscapeToMain()
     {
         SceneManager.LoadScene(0);
@@ -26,21 +23,6 @@ public class MainMenuScript : MonoBehaviour
     public void PickColor()
     {
         SceneManager.LoadScene(1);
-    }
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0.0f;
-    }
-    public void ResumeGame()
-    {
-        Time.timeScale = 1.0f;
-    }
-
-    public void GameOver()
-    {
-        PauseGame();
-        _gameOverScreen.SetActive(true);
     }
 
     public void OnApplicationQuit()

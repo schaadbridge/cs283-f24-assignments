@@ -9,14 +9,15 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI label;
     private LevelLoader _levelLoader;
-    private float goal;
+    private string goalText = "";
     // Start is called before the first frame update
     void Start()
     {
-        _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
-        goal = _levelLoader.scoreGoal;
-        Debug.Log("UIManager start method.");
-        label.text = "Mushrooms: " + 0 + "/" + goal;
+        if (GameObject.Find("LevelLoader")) {
+            _levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
+            goalText = "/" + _levelLoader.scoreGoal;
+        }
+        label.text = "0" + goalText;
     }
 
     // Update is called once per frame
@@ -26,6 +27,6 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateScore(int playerScore) {
         Debug.Log("Updating UI Score to " + playerScore);
-        label.text = "Mushrooms: " + playerScore.ToString() + "/" + goal;
+        label.text = playerScore.ToString() + goalText;
     }
 }
