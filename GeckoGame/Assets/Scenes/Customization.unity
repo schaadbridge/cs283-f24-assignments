@@ -1088,7 +1088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76fc3ff5289421344a6f76d1556792c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 0}
 --- !u!1001 &264018533855657349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1102,9 +1101,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4559302159937701208, guid: cb79bca0a3e89d146abf6a112dc6c5b9, type: 3}
+      propertyPath: customTexture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559302159937701208, guid: cb79bca0a3e89d146abf6a112dc6c5b9, type: 3}
+      propertyPath: objectTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: d61e292cc1cc1b14895bf0aed1a2a645, type: 3}
+    - target: {fileID: 4559302159937701208, guid: cb79bca0a3e89d146abf6a112dc6c5b9, type: 3}
       propertyPath: changeThisColor
       value: 
       objectReference: {fileID: 1991346408}
+    - target: {fileID: 4559302159937701208, guid: cb79bca0a3e89d146abf6a112dc6c5b9, type: 3}
+      propertyPath: changeThisMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: f65b2b5a402c648438fcffd294eb2dbe, type: 2}
     - target: {fileID: 5300852653500200261, guid: cb79bca0a3e89d146abf6a112dc6c5b9, type: 3}
       propertyPath: m_Name
       value: ColorPicker

@@ -636,7 +636,11 @@ PrefabInstance:
     - target: {fileID: 958812436838884060, guid: f5663cabd1920704db600938db5becff, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8284d074b17f17b47afe2455c472cedb, type: 2}
+      objectReference: {fileID: 9100000, guid: 2dbb6380505279449a84cb9829845287, type: 2}
+    - target: {fileID: 1390335768968493920, guid: f5663cabd1920704db600938db5becff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5829239757759029788, guid: f5663cabd1920704db600938db5becff, type: 3}
       propertyPath: m_Name
       value: Gecko_A07
@@ -1393,7 +1397,7 @@ PrefabInstance:
     - target: {fileID: 7642897199193411456, guid: 425306085eedfa94a87060d9b3eea012, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8284d074b17f17b47afe2455c472cedb, type: 2}
+      objectReference: {fileID: 9100000, guid: 2dbb6380505279449a84cb9829845287, type: 2}
     - target: {fileID: 9072020396590523387, guid: 425306085eedfa94a87060d9b3eea012, type: 3}
       propertyPath: m_Name
       value: Gecko_NPC
@@ -1432,7 +1436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8999badc3e9aaf54281cf66fc9f713be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 0}
 --- !u!224 &2046775031
 RectTransform:
   m_ObjectHideFlags: 0

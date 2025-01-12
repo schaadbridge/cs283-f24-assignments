@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting.Dependencies.Sqlite;
 
 public class ColorPickerControl : MonoBehaviour
 {
@@ -12,10 +13,19 @@ public class ColorPickerControl : MonoBehaviour
     [SerializeField]
     private Slider hueSlider;
 
+    [SerializeField]
+    private Texture2D objectTexture;
+
     private Texture2D hueTexture, svTexture, outputTexture;
 
     [SerializeField]
     private SkinnedMeshRenderer changeThisColor;
+
+    [SerializeField]
+    private Material changeThisMaterial;
+
+    [SerializeField]
+    private bool customTexture;
 
 
     // Start is called before the first frame update
@@ -87,6 +97,21 @@ public class ColorPickerControl : MonoBehaviour
         outputImage.texture = outputTexture;
     }
 
+    private void CreateObjectImage()
+    {
+        for (int i = 0; i < objectTexture.height; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                // there should be six different colors of increasing value
+                objectTexture.SetPixel(j, i, Color.HSVToRGB(currentHue, currentSat, (float)(10-j / 2) / 5 * currentVal));
+            }
+        }
+
+        objectTexture.Apply();
+        changeThisMaterial.mainTexture = objectTexture;
+    }
+
     private void UpdateOutputImage()
     {
         Color currentColor = Color.HSVToRGB(currentHue, currentSat, currentVal);
@@ -98,7 +123,14 @@ public class ColorPickerControl : MonoBehaviour
 
         outputTexture.Apply();
 
-        changeThisColor.GetComponent<SkinnedMeshRenderer>().material.color = currentColor;
+        if (customTexture)
+        {
+            CreateObjectImage();
+        }
+        else
+        {
+            changeThisColor.GetComponent<SkinnedMeshRenderer>().material.color = currentColor;
+        }
         MainManager.Instance.TeamColor = currentColor;
     }
 

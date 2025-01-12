@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -54,11 +55,9 @@ public class ColorPickButton : MonoBehaviour, IDragHandler, IPointerClickHandler
 
         pickerTransform.localPosition = pos;
         Debug.Log(pos);
-        pickerImage.color = Color.HSVToRGB(0, 0, 1 - yNorm);
 
         CC.SetSV(xNorm, yNorm);
     }
-
 
     public void OnDrag(PointerEventData eventData)
     {
